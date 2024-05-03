@@ -1,0 +1,1074 @@
+<html lang="en" style="height: auto">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="/logo192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <!--<script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>-->
+   
+    <script src="./assets/dist/js/adminlte.js"></script>
+    <title>Amexpert - Extranet</title>
+    <script defer="defer" src="/static/js/main.069f0b50.js"></script>
+    <link href="./assets/dist/css/adminlte.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="assets/plugins/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <style data-styled="active" data-styled-version="5.3.5"></style>
+    <link rel="stylesheet" type="text/css" href="/static/css/282.e4ab9df4.chunk.css" />
+    <style>
+        input.parsley-success,
+        select.parsley-success,
+        textarea.parsley-success {
+            color: #468847;
+            background-color: #DFF0D8;
+            border: 1px solid #D6E9C6;
+        }
+
+        input.parsley-error,
+        select.parsley-error,
+        textarea.parsley-error {
+            color: #B94A48;
+            background-color: #F2DEDE;
+            border: 1px solid #EED3D7;
+        }
+
+        .parsley-errors-list {
+            margin: 2px 0 3px;
+            padding: 0;
+            list-style-type: none;
+            font-size: 0.9em;
+            line-height: 0.9em;
+            opacity: 0;
+            color: #B94A48;
+
+            transition: all .3s ease-in;
+            -o-transition: all .3s ease-in;
+            -moz-transition: all .3s ease-in;
+            -webkit-transition: all .3s ease-in;
+        }
+
+        .parsley-errors-list.filled {
+            opacity: 1;
+        }
+    </style>
+
+</head>
+
+<body classname="hold-transition sidebar-mini layout-navbar-fixed" style="height: auto">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <div class="wrapper">
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light relative">
+                <img src="./assets/brand/logo.png" alt="Logo" style="
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            transform: translate(-50%, 0%);
+          " />
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" data-widget="pushmenu" role="button" href="/interventions"><i
+                                class="fas fa-bars"></i></a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-underline" data-widget="control-sidebar" data-slide="true"
+                            role="button" href id="logout" style="color: red">Déconnexion</a>
+                    </li>
+                </ul>
+            </nav>
+            <aside class="main-sidebar sidebar-dark-primary elevation-4">
+                <a class="brand-link" href="dashboard.html"
+                    style="display: block; text-align: center; margin: auto"><span class="brand-text">Amexpert
+                        Commande</span></a>
+                <div
+                    class="sidebar os-host os-theme-light os-host-overflow os-host-overflow-y os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-transition">
+                    <div class="os-resize-observer-host observed">
+                        <div class="os-resize-observer" style="left: 0px; right: auto"></div>
+                    </div>
+                    <div class="os-size-auto-observer observed" style="height: calc(100% + 1px); float: left">
+                        <div class="os-resize-observer"></div>
+                    </div>
+                    <div class="os-content-glue"></div>
+                    <div class="os-padding">
+                        <div class="os-viewport os-viewport-native-scrollbars-invisible">
+                            <div class="os-content" style="height: 100%; width: 100%">
+                                <div class="user-panel mt-3 pb-3 mb-3 d-flex justify-content-center align-items-center">
+                                    <div class="info">
+                                        <a class="d-block text-decoration-underline" href="/profil" id="name_user"> </a>
+                                    </div>
+                                </div>
+                                <nav class="mt-2">
+                                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                                        data-accordion="false">
+                                        <li class="nav-item menu-open">
+                                            <a class="nav-link" href="dashboard.html"><i class="bi bi-speedometer2"></i>
+                                                <p>Tableau de Bord</p>
+                                            </a>
+                                        </li>
+                                        <li class="sub-menu nav-item" style="display: inline;" id="rdv_link">
+                                            <a class="nav-link" href="#"><i class="bi bi-calendar-event"></i>
+                                                <p>Commande</p>
+                                                <i class="fas fa-angle-left right"></i>
+                                            </a>
+                                            <ul class="nav nav-treeview">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="rendez-vous.html"><i
+                                                            class="bi bi-calendar-plus-fill"></i>
+                                                        <p>Ajouter un rendez-vous</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="rendez-vous_list.html"><i
+                                                            class="bi bi-list-columns-reverse"></i>
+                                                        <p>Liste des rendez-vous</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="sub-menu nav-item menu-is-opening menu-open" style="display: inline;"
+                                            id="user_link">
+                                            <a class="nav-link active" href="#"><i class="bi bi-people"></i>
+                                                <p>Utilisateurs</p>
+                                                <i class="fas fa-angle-left right"></i>
+                                            </a>
+                                            <ul class="nav nav-treeview" style="display: block">
+                                                <li class="nav-item" id="add_user_link">
+                                                    <a class="nav-link" href="ajouter-un-utilisateur.html"><i
+                                                            class="bi bi-person-plus"></i>
+                                                        <p>Ajouter un utilisateur</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link nav-active" href="list.html"><i
+                                                            class="bi bi-list-columns-reverse"></i>
+                                                        <p>Liste des utilisateurs</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="sub-menu nav-item menu-is-opening 
+                                                    menu-open" style="display: inline;" id="plannification_link">
+                                            <a class="nav-link active" href="#"><i class="bi bi-gear"></i>
+                                                <p>Planification</p>
+                                                <i class="fas fa-angle-left right"></i>
+                                            </a>
+                                            <ul class="nav nav-treeview" style="display: block">
+                                                <li class="nav-item">
+                                                    <a class="nav-link nav-active" href="rendez-vous-attente.html"><i
+                                                            class="bi bi-gear-wide-connected"></i>
+                                                        <p>Liste des RDV Crées</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="rendez-vous-en-charge.html"><i
+                                                            class="bi bi-building"></i>
+                                                        <p>Liste des RDV en charges</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="sub-menu nav-item" id="param_link " style="display: inline;">
+                                            <a class="nav-link" href="#"><i class="bi bi-gear"></i>
+                                                <p>Paramètres</p>
+                                                <i class="fas fa-angle-left right"></i>
+                                            </a>
+                                            <ul class="nav nav-treeview">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="param-in-.html"><i
+                                                            class="bi bi-gear-wide-connected"></i>
+                                                        <p>Type d'interventions</p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="nature_bien.html"><i
+                                                            class="bi bi-building"></i>
+                                                        <p>Nature du bien</p>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="os-scrollbar os-scrollbar-horizontal os-scrollbar-unusable os-scrollbar-auto-hidden">
+                        <div class="os-scrollbar-track">
+                            <div class="os-scrollbar-handle" style="width: 100%; transform: translate(0px, 0px)"></div>
+                        </div>
+                    </div>
+                    <div class="os-scrollbar os-scrollbar-vertical os-scrollbar-auto-hidden">
+                        <div class="os-scrollbar-track">
+                            <div class="os-scrollbar-handle" style="height: 31.7881%; transform: translate(0px, 0px)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="os-scrollbar-corner"></div>
+                </div>
+            </aside>
+            <div class="content-wrapper">
+                <section class="content-header">
+                    <div class="container-fluid">
+                        <div class="row mb-2">
+                            <div class="col-sm-6">
+                                <h1>Tarification</h1>
+                            </div>
+                            <div class="col-sm-6">
+                                <ol class="breadcrumb float-sm-right">
+                                    <li class="breadcrumb-item active">Tarifications</li>
+                                    <li class="breadcrumb-item active">
+                                        Ajouter un Tarif
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="card" style="padding: 0px">
+                                
+                                <div class="card-header" style="padding: .5rem 1rem 0rem">
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item" role="validation">
+                                            <button class="nav-link active " id="home-tab" data-bs-toggle="tab"
+                                                data-bs-target="#appartement" type="button" role="tab"
+                                                aria-controls="appartement" aria-selected="true">Appartements</button>
+                                        </li>
+                                        <li class="nav-item" role="list">
+                                            <button class="nav-link " id="pavillons-tab" disabled data-bs-toggle="tab"
+                                                data-bs-target="#pavillons" type="button" role="tab"
+                                                aria-controls="pavillons" aria-selected="false">Pavillons</button>
+                                        </li>
+                                        <li class="nav-item" role="list">
+                                            <button class="nav-link " id="chiffrages-tab" disabled data-bs-toggle="tab"
+                                                data-bs-target="#chiffrage" type="button" role="tab"
+                                                aria-controls="chiffrage" aria-selected="false">Chiffrage</button>
+                                        </li>
+                                        <li class="nav-item" role="list">
+                                            <button class="nav-link " id="com-tabs" disabled data-bs-toggle="tab"
+                                                data-bs-target="#com" type="button" role="tab" aria-controls="com"
+                                                aria-selected="false">Com</button>
+                                        </li>
+                                        <li class="nav-item" role="list">
+                                            <button class="nav-link " id="cell-tabs" disabled data-bs-toggle="tab"
+                                                data-bs-target="#cell" type="button" role="tab" aria-controls="cell"
+                                                aria-selected="false">Cell</button>
+                                        </li>
+                                        <li class="nav-item" role="list">
+                                            <button class="nav-link " id="autres-tab" disabled data-bs-toggle="tab"
+                                                data-bs-target="#autres" type="button" role="tab" aria-controls="autres"
+                                                aria-selected="false">Autres</button>
+                                        </li>
+                                        <li>
+                                            <a href="Tarifs.html" class="btn btn-default" style="color: #B94A48;">Annuler</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-body" style="padding: 0;">
+                                    <div class="tab-content " id="myTabContent">
+                                        <div class="tab-pane fade show active " id="appartement" role="tabpanel"
+                                            aria-labelledby="home-tab">
+                                            <form style="margin: 0;" id="appartmentV" novalidate>
+                                                <div class="card-body">
+                                                   
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL appt prix f1">EDL appt prix f1</label>
+                                                                <input id="EDL_appt_prix_f1" type="text" required
+                                                                    class="form-control " required
+                                                                    placeholder="EDL appt prix f1"
+                                                                    name="edl_appt_prix_f1">
+                                                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                                                        Please provide a valid city.
+                                                                      </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL appt prix f2">EDL appt prix f2</label>
+                                                                <input id="edl_appt_prix_f2" type="text" required
+                                                                    class="form-control " required
+                                                                    placeholder="EDL appt prix f2"
+                                                                    name="edl_appt_prix_f2">
+                                                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                                                        Please provide a valid city.
+                                                                      </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL appt prix f3">EDL appt prix f3</label>
+                                                                <input id="edl_appt_prix_f3" type="text" required
+                                                                    class="form-control " required
+                                                                    placeholder="EDL appt prix f3"
+                                                                    name="edl_appt_prix_f3">
+                                                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                                                        Please provide a valid city.
+                                                                      </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL appt prix f4">EDL appt prix f4</label>
+                                                                <input id="edl_appt_prix_f4" type="text" required
+                                                                    class="form-control " required
+                                                                    placeholder="EDL appt prix f4"
+                                                                    name="edl_appt_prix_f4">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL appt prix f5">EDL appt prix f5</label>
+                                                                <input id="edl_appt_prix_f5" type="text" required
+                                                                    class="form-control " required
+                                                                    placeholder="EDL appt prix f5"
+                                                                    name="edl_appt_prix_f5">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL appt prix f6">EDL appt prix f6</label>
+                                                                <input id="edl_appt_prix_f6" type="text" required
+                                                                    class="form-control " required
+                                                                    placeholder="EDL appt prix f6"
+                                                                    name="edl_appt_prix_f6">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+
+                                                <div class="card-footer" style="display: flex;
+                                                justify-content: end;">
+                                                    <button class="btn btn-primary" id="tarif_id">
+                                                        Suivant
+                                                    </button>
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane fade " id="pavillons" role="tabpanel"
+                                            aria-labelledby="home-tab">
+                                            <form style="margin: 0;" id="pavillonV" novalidate>
+                                                <div class="card-body">
+
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL prix std">EDL prix std </label>
+                                                                <input id="EDL_prix_std" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="EDL prix std" name="edl_prix_std">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL pav villa prix t1">EDL pav villa prix
+                                                                    t1</label>
+                                                                <input id="edl_pav_villa_prix_t1" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="EDL pav villa prix t1"
+                                                                    name="edl_pav_villa_prix_t1">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL pav villa prix t2">EDL pav villa prix
+                                                                    t2</label>
+                                                                <input id="edl_pav_villa_prix_t2" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="EDL appt prix f3"
+                                                                    name="edl_pav_villa_prix_t2">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL pav villa prix t3">EDL pav villa prix
+                                                                    t3</label>
+                                                                <input id="edl_pav_villa_prix_t3" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="EDL pav villa prix t3"
+                                                                    name="edl_pav_villa_prix_t3">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL appt prix f4">EDL pav villa prix
+                                                                    t4</label>
+                                                                <input id="edl_pav_villa_prix_t4" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="EDL pav villa prix t4"
+                                                                    name="edl_pav_villa_prix_t4">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL pav villa prix t5">EDL pav villa prix
+                                                                    t5</label>
+                                                                <input id="edl_pav_villa_prix_t5" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="EDL pav villa prix t5"
+                                                                    name="edl_pav_villa_prix_t5">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL pav villa prix t5">EDL pav villa prix
+                                                                    t5</label>
+                                                                <input id="edl_pav_villa_prix_t6" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="EDL pav villa prix t5"
+                                                                    name="edl_pav_villa_prix_t6">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL pav villa prix t7">EDL pav villa prix
+                                                                    t7</label>
+                                                                <input id="edl_pav_villa_prix_t7" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="EDL pav villa prix t7"
+                                                                    name="edl_pav_villa_prix_t7">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL pav villa prix t8">EDL pav villa prix
+                                                                    t8</label>
+                                                                <input id="edl_pav_villa_prix_t8" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="EDL pav villa prix t8"
+                                                                    name="edl_pav_villa_prix_t8">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="CHIF appt prix stu">CHIF appt prix
+                                                                    stu</label>
+                                                                <input id="chiff_appt_prix_stu" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="CHIF appt prix stu"
+                                                                    name="chiff_appt_prix_stu">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+
+                                                <div class="card-footer" style="position: relative">
+                                                    <button class="btn btn-primary" type="button" onclick="previousTab('home-tab')">Precédent</button>
+                                                    <button class="btn btn-primary" id="tarif_id" style="position: absolute; right: 15px;">
+                                                        Suivant
+                                                    </button>
+                                                </div>
+
+                                            </form>
+                                        </div>
+
+                                        <div class="tab-pane fade " id="chiffrage" role="tabpanel"
+                                            aria-labelledby="chiffrage-tab">
+                                            <form style="margin: 0;" 
+                                                data-parsley-validate id="chiffrageV" novalidate>
+                                                <div class="card-body">
+
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="CHIF appt prix f1">CHIF appt prix f1
+                                                                </label>
+                                                                <input id="chif_appt_prix_f1" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="CHIF appt prix f1"
+                                                                    name="chif_appt_prix_f1">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="CHIF appt prix f2">CHIF appt prix f2
+                                                                </label>
+                                                                <input id="chif_appt_prix_f2" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="CHIF appt prix f2"
+                                                                    name="chif_appt_prix_f2">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="CHIF appt prix f3">CHIF appt prix f3
+                                                                </label>
+                                                                <input id="chif_appt_prix_f3" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="CHIF appt prix f3"
+                                                                    name="chif_appt_prix_f3">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="CHIF appt prix f4">CHIF appt prix f4
+                                                                </label>
+                                                                <input id="chif_appt_prix_f4" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="CHIF appt prix f4"
+                                                                    name="chif_appt_prix_f4">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="CHIF appt prix f5">CHIF appt prix f5
+                                                                </label>
+                                                                <input id="chif_appt_prix_f5" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="CHIF appt prix f5"
+                                                                    name="chif_appt_prix_f5">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="CHIF appt prix f6">CHIF appt prix f6
+                                                                </label>
+                                                                <input id="chif_appt_prix_f6" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="CHIF appt prix f6"
+                                                                    name="chif_appt_prix_f6">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="CHIF appt prix f7">CHIF appt prix f7
+                                                                </label>
+                                                                <input id="chif_appt_prix_f7" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="CHIF appt prix f7"
+                                                                    name="chif_appt_prix_f7">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="CHIF appt prix f8">CHIF appt prix f8
+                                                                </label>
+                                                                <input id="chif_appt_prix_f8" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="CHIF appt prix f8"
+                                                                    name="chif_appt_prix_f8">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL pav villa prix t2">EDL pav villa prix
+                                                                    t2</label>
+                                                                <input id="chif_edl_pav_villa_prix_t2" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="EDL appt prix f3"
+                                                                    name="chif_edl_pav_villa_prix_t2">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL pav villa prix t3">EDL pav villa prix
+                                                                    t3</label>
+                                                                <input id="chif_edl_pav_villa_prix_t3" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="EDL pav villa prix t3"
+                                                                    name="chif_edl_pav_villa_prix_t3">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL appt prix f4">EDL pav villa prix
+                                                                    t4</label>
+                                                                <input id="chif_edl_pav_villa_prix_t4" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="EDL pav villa prix t4"
+                                                                    name="chif_edl_pav_villa_prix_t4">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL pav villa prix t5">EDL pav villa prix
+                                                                    t5</label>
+                                                                <input id="chif_edl_pav_villa_prix_t5" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="EDL pav villa prix t5"
+                                                                    name="chif_edl_pav_villa_prix_t5">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL pav villa prix t5">EDL pav villa prix
+                                                                    t5</label>
+                                                                <input id="chif_edl_pav_villa_prix_t6" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="EDL pav villa prix t5"
+                                                                    name="chif_edl_pav_villa_prix_t6">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL pav villa prix t7">EDL pav villa prix
+                                                                    t7</label>
+                                                                <input id="chif_edl_pav_villa_prix_t7" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="EDL pav villa prix t7"
+                                                                    name="chif_edl_pav_villa_prix_t7">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="EDL pav villa prix t8">EDL pav villa prix
+                                                                    t8</label>
+                                                                <input id="chif_edl_pav_villa_prix_t8" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="EDL pav villa prix t8"
+                                                                    name="chif_edl_pav_villa_prix_t8">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+
+                                                <div class="card-footer" style="position: relative">
+                                                    <button class="btn btn-primary" type="button" onclick="previousTab('pavillons-tab')">Precédent</button>
+                                                    <button class="btn btn-primary" id="tarif_id" style="position: absolute; right: 15px;">
+                                                        Suivant
+                                                    </button>
+                                                </div>
+
+                                            </form>
+                                        </div>
+
+                                        <div class="tab-pane fade " id="com" role="tabpanel" aria-labelledby="com-tab">
+                                            <form style="margin: 0;" id="comV" novalidate>
+                                                <div class="card-body">
+
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="Com as sur ca client">Com as sur ca client
+                                                                </label>
+                                                                <input id="com_as_sur_client" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="Com as sur ca client"
+                                                                    name="com_as_sur_client">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="Com cell dev ref responsable">Com cell dev
+                                                                    ref responsable </label>
+                                                                <input id="com_cell_dev_ref_responsable" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="Com cell dev ref responsable"
+                                                                    name="com_cell_dev_ref_responsable">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="Com cell dev ref agent">Com cell dev ref
+                                                                    agent </label>
+                                                                <input id="com_cell_dev_ref_agent" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="Com cell dev ref agent"
+                                                                    name="com_cell_dev_ref_agent">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="Com cell tech Ref agent">Com cell tech Ref
+                                                                    agent</label>
+                                                                <input id="com_cell_tech_ref_agent" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="Com cell tech Ref agent"
+                                                                    name="com_cell_tech_ref_agent">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="Com cell tech ref responsable">Com cell tech
+                                                                    ref responsable </label>
+                                                                <input id="com_cell_tech_ref_responsable" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="Com cell tech ref responsable"
+                                                                    name="com_cell_tech_ref_responsable">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="Com cell tech ref suiveur">Com cell tech ref
+                                                                    suiveur </label>
+                                                                <input id="com_cell_tech_ref_suiveur" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="Com cell tech ref suiveur"
+                                                                    name="com_cell_tech_ref_suiveur">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="Com cell planif ref responsable">Com cell
+                                                                    planif ref responsable </label>
+                                                                <input id="com_cell_planif_ref_responsable" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="Com cell planif ref responsable"
+                                                                    name="com_cell_planif_ref_responsable">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="Com cell planif ref suiveur">Com cell planif
+                                                                    ref suiveur </label>
+                                                                <input id="com_cell_planif_ref_suiveur" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="Com cell planif ref suiveur"
+                                                                    name="com_cell_planif_ref_suiveur">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="Com cell planif ref gent saisie">Com cell
+                                                                    planif ref gent saisie</label>
+                                                                <input id="com_cell_planif_ref_gent_saisie" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="Com cell planif ref gent saisie"
+                                                                    name="com_cell_planif_ref_gent_saisie">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card-footer" style="position: relative">
+                                                    <button class="btn btn-primary" type="button" onclick="previousTab('chiffrages-tab')">Precédent</button>
+                                                    <button class="btn btn-primary" id="tarif_id" style="position: absolute; right: 15px;">
+                                                        Suivant
+                                                    </button>
+                                                </div>
+
+                                            </form>
+                                        </div>
+
+                                        <div class="tab-pane fade " id="cell" role="tabpanel"
+                                            aria-labelledby="cell-tab">
+                                            <form style="margin: 0;" id="cellV" novalidate>
+                                                <div class="card-body">
+
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="Com as sur ca client">Com as sur ca client
+                                                                </label>
+                                                                <input id="com_as_sur_ca_client" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="Com as sur ca client"
+                                                                    name="com_as_sur_ca_client">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="cell dev ref responsable"> Cell dev ref
+                                                                    responsable </label>
+                                                                <input id="cell_dev_ref_responsable" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="Cell dev ref responsable"
+                                                                    name="cell_dev_ref_responsable">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="Com cell dev ref agent">Com cell dev ref
+                                                                    agent </label>
+                                                                <input id="cell_dev_ref_agent" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="Com cell dev ref agent"
+                                                                    name="cell_dev_ref_agent">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="Com cell tech Ref agent">Com cell tech Ref
+                                                                    agent</label>
+                                                                <input id="cell_tech_ref_agent" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="Com cell tech Ref agent"
+                                                                    name="cell_tech_ref_agent">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="Com cell tech ref responsable">Com cell tech
+                                                                    ref responsable </label>
+                                                                <input id="cell_tech_ref_responsable" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="Com cell tech ref responsable"
+                                                                    name="cell_tech_ref_responsable">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="Com cell tech ref suiveur">Com cell tech ref
+                                                                    suiveur </label>
+                                                                <input id="cell_tech_ref_suiveur" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="Com cell tech ref suiveur"
+                                                                    name="cell_tech_ref_suiveur">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="Com cell planif ref responsable">Com cell
+                                                                    planif ref responsable </label>
+                                                                <input id="cell_planif_ref_responsable" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="Com cell planif ref responsable"
+                                                                    name="cell_planif_ref_responsable">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="Com cell planif ref suiveur">Com cell planif
+                                                                    ref suiveur </label>
+                                                                <input id="cell_planif_ref_suiveur" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="Com cell planif ref suiveur"
+                                                                    name="cell_planif_ref_suiveur">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="Com cell planif ref gent saisie">Com cell
+                                                                    planif ref gent saisie</label>
+                                                                <input id="cell_planif_ref_gent_saisie" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="Com cell planif ref gent saisie"
+                                                                    name="cell_planif_ref_gent_saisie">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="card-footer" style="position: relative">
+                                                    <button class="btn btn-primary" type="button" onclick="previousTab('com-tabs')">Precédent</button>
+                                                    <button class="btn btn-primary" id="tarif_id" style="position: absolute; right: 15px;">
+                                                        Suivant
+                                                    </button>
+                                                </div>
+
+                                            </form>
+                                        </div>
+
+                                        <div class="tab-pane fade " id="autres" role="tabpanel"
+                                            aria-labelledby="autres-tab">
+                                            <form style="margin: 0;" id="autresV" novalidate>
+                                                <div class="card-body">
+
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="prix autres">Prix € autre </label>
+                                                                <input id="prix_autres" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="Prix en €"
+                                                                    name="prix_autres">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="code tva">Code TVA </label>
+                                                                <input id="code_tva" type="text" class="form-control "
+                                                                    required placeholder="code tva" name="code_tva">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="taux_meuble">Taux meuble </label>
+                                                                <input id="taux_meuble" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="taux_meuble" name="taux_meuble">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="referent_as_client">Reférent AS
+                                                                    client</label>
+                                                                <input id="referent_as_client" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="Com cell tech Ref agent"
+                                                                    name="referent_as_client">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-4">
+                                                            <div class="form-group">
+                                                                <label for="commentaire libre">Commentaire libre
+                                                                </label>
+                                                                <input id="commentaire_libre" type="text"
+                                                                    class="form-control " required
+                                                                    placeholder="commentaire libre"
+                                                                    name="commentaire_libre" />
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                 <div class="card-footer" style="position: relative">
+                                                    <button class="btn btn-primary" type="button" onclick="previousTab('cell-tabs')">Precédent</button>
+                                                    <a class="btn btn-primary" id="goEditTarifs" style="position: absolute; right: 15px;">
+                                                        Enregistrer
+                                                    </a>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+            <footer class="main-footer" style="max-height: 57px; height: 57px">
+                <div class="float-right d-none d-sm-block"><b>Version</b> 1.0.0</div>
+                <strong>Copyright © 2021
+                    <a href="https://amexpert.pro/" rel="noopener noreferrer" target="_blank"
+                        style="color: black">Amexpert</a>.</strong>
+                Tous droits réservés.
+            </footer>
+
+            <div id="sidebar-overlay"></div>
+        </div>
+        <div class="Toastify" style=""></div>
+    </div>
+    <script src="./assets/plugins/jquery/jquery.min.js"></script>
+    <!-- <script src="https://parsleyjs.org/dist/parsley.min.js"></script> -->
+    <script src=" https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js "></script>
+    
+    <script src="assets/dist/js/jquery-cookie-master/src/jquery.cookie.js"></script>
+    <script src="assets/dist/js/login.js"></script>
+    <script src="assets/dist/js/url.js"></script>
+    <script src="assets/dist/js/user.js"></script>
+    <script src="assets/dist/js/event_user.js"></script>
+    <script src="assets/dist/js/parametre.js"></script>
+    <script src="assets/dist/js/tarifaction.js"></script>
+    <script>
+        checkLoged()
+        loadNav()
+        getTarifToEdit()
+        window.onload = function () {
+            getInterventionAndStatut()
+            loadNav()
+        }
+    </script>
+
+    <script>
+        (function () {
+            'use strict'
+            var appartmentV = document.querySelector('#appartmentV');
+            var pavillonV = document.querySelector("#pavillonV");
+            var chiffrageV = document.querySelector("#chiffrageV");
+            var comV = document.querySelector("#comV");
+            var cellV = document.querySelector("#cellV");
+            var autresV = document.querySelector("#autresV");
+
+            appartmentV.addEventListener('submit', function (e) {
+                e.preventDefault();
+            if (!appartmentV.checkValidity()) {
+                e.stopPropagation()
+            } else {
+                // alert("insider")
+                let pavillonTab = document.getElementById("pavillons-tab");
+                console.log(pavillonTab)
+                pavillonTab.disabled = false;
+                pavillonTab.click();
+            } 
+        });
+
+        pavillonV.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (!pavillonV.checkValidity()) {
+                e.stopPropagation();
+            } else {
+                let chiffrageTab = document.getElementById("chiffrages-tab");
+                chiffrageTab.disabled = false;
+                chiffrageTab.click();
+            } 
+        });
+
+        chiffrageV.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (!chiffrageV.checkValidity()) {
+                e.stopPropagation();
+            } else {
+                let comTab = document.getElementById("com-tabs");
+                comTab.disabled = false;
+                comTab.click();
+            }
+        });
+
+        comV.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (!comV.checkValidity()) {
+                e.stopPropagation();
+            } else {
+                let cellTab = document.getElementById("cell-tabs");
+                cellTab.disabled = false;
+                cellTab.click();
+            }
+        });
+
+        cellV.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (!cellV.checkValidity()) {
+                e.stopPropagation();
+            } else {
+                let autresTab = document.getElementById("autres-tab");
+                autresTab.disabled = false;
+                autresTab.click();
+            }
+        });
+
+        autresV.addEventListener('submit', function (e) {
+            e.preventDefault();
+        });
+
+        appartmentV.classList.add('was-validated');
+        pavillonV.classList.add("was-validated");
+        chiffrageV.classList.add("was-validated");
+        comV.classList.add("was-validated");
+        cellV.classList.add("was-validated");
+        autresV.classList.add("was-validated");
+    })()
+
+    function previousTab (tab) {
+        document.getElementById(tab).click();
+    }
+    </script>
+</body>
+
+</html>
