@@ -203,7 +203,7 @@
             <div class="container-fluid">
               <div class="row mb-2">
                 <div class="col-sm-6">
-                  <h1 class="m-0">TARIFS</h1>
+                  <h1 class="m-0">TARIFS LIBRE</h1>
                 </div>
                 <div class="col-sm-6">
                   <ol class="breadcrumb float-sm-right">
@@ -244,6 +244,19 @@
                       </div>
                     </center>
                 </div>
+                <div class="row justify-content-end"> <!-- Alignement à droite -->
+                    <div class="col-md-4">
+                        <div id="client">
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                      <!-- Bouton "Nature du bien" sous forme de liste déroulante -->
+                        <a class="btn btn-primary btn-sm btn-block btn-oval" href="ajouter-un-tarif_libre.html">
+                          AJOUTER
+                        </a>
+                    </div>
+                </div>
               <div class="row">
                 <div class="col-12">
                   <div class="card">
@@ -271,16 +284,11 @@
                         <thead>
                           <tr>
                             <th></th>
-                            <th>Code TVA</th>
-                            <th>T_Meuble</th>
-                            <th>Ref Client</th>
-                            <th>responsable</th>
-                            <th>agent</th>
-                            <th>suiveur</th>
-                            <th>agent_saisie</th>
-                            <th>Prix_Autre</th>
-                            <th>Date</th>
-                            <th></th>
+                            <th>Reference client</th>
+                            <th>Type prestation</th>
+                            <th>Prestation</th>
+                            <th>prix Unitaire</th>
+                            <th>Opérations</th>
                           </tr>
                         </thead>
                         <tbody id="contentTableTarif">
@@ -363,8 +371,14 @@
     <script src="assets/dist/js/url.js" ></script>
     <script src="assets/dist/js/user.js" ></script>
     <script src="assets/dist/js/event_user.js" ></script>
-    <script src="assets/dist/js/tarif.js" ></script>
+    <script src="assets/dist/js/tarifaction.js" ></script>
     <script src="assets/dist/js/filtres.js" ></script>
+
+    <script>
+      checkLoged();
+      getAllTarifLibre();
+      getClient();
+    </script>
     
   </body>
 </html>

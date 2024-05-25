@@ -1,9 +1,9 @@
 var toEdit = 0;
 var Edition = 0;
-var base_online = "http://195.15.218.172";
-var base_local = "http://195.15.218.172";
-var route_file = "http://195.15.218.172" + "/cmd/file/";
-var route_file1 = "http://195.15.218.172" + "/cmd/file/view/";
+var base_online = "http://127.0.0.1:8001/";
+var base_local = "http://127.0.0.1:8001/";
+var route_file = "http://127.0.0.1:8001/" + "/cmd/file/";
+var route_file1 = "http://127.0.0.1:8001/" + "/cmd/file/view/";
 var cas_rdv = "rdv";
 var cas_user = "user";
 const asurl_not_paginated = base_local + "/agent_app/agent/?paginated=t";

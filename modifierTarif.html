@@ -1100,7 +1100,7 @@
                                                 <div class="card-footer" style="position: relative">
                                                     <button class="btn btn-primary" type="button"
                                                         onclick="previousTab('cell-tabs')">Precédent</button>
-                                                    <a class="btn btn-primary" id="goAddTarifs"
+                                                    <a class="btn btn-primary" id="goEditTarifs"
                                                         style="position: absolute; right: 15px;">
                                                         Enregistrer
                                                     </a>
@@ -1143,11 +1143,9 @@
     <script>
         checkLoged()
         loadNav()
-        getPropriete()
-        getClient()
+        getTarifToEdit()
         window.onload = function () {
-            getInterventionAndStatut()
-            loadNav()
+            
         }
     </script>
 

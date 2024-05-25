@@ -254,11 +254,7 @@ function code(url_) {
             "</span>\
               </td>\
               <td>\
-              <a  onclick='goWhereEdit(" +
-            id_toget +
-            ',"' +
-            elt["groups"][0]["group"] +
-            '"' +
+              <a  onclick='goWhereEdit(" +id_toget +',"' +elt["groups"][0]["group"] +'"' +
             ')\' ><i class="bi bi-pencil-square"style="color: rgb(0, 0, 0)"></i></a>&nbsp;<a  onclick=\'goWhereEdit1(' +
             id_toget +
             ',"' +

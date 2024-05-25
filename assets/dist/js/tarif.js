@@ -27,6 +27,8 @@ function getTypeLogement(){
   });
 }
 
+
+
 function getAllTarif() {
   // Appel de la fonction pour récupérer les types de logement
   getTypeLogement();
@@ -48,9 +50,9 @@ function getAllTarif() {
       prev = response["previous"];
       $("#total").text(max_);
       $("#contentTableTarif").empty();
-      response["results"].forEach((elt) => {
+      response.forEach((elt) => {
         // Récupération du type de logement associé au tarif
-        var type = "";
+        /*var type = "";
         if (listeLogementType != null) {
           logementEnCours = listeLogementType.find(elem => elem.id.toString() === elt["propriete"]["type"].toString());
         }
@@ -58,33 +60,30 @@ function getAllTarif() {
           type = elt["propriete"]["type_propriete"]["type"];
         } else {
           type = logementEnCours["nom"];
-        }
+        }*/
+
+        //id_toget = elt["elt"]["id"];
 
         // Formatage de la date
-        var formattedDate = new Date(elt["date"]);
+        /*var formattedDate = new Date(elt["date"]);
         var d = formattedDate.getDate();
         var m = formattedDate.getMonth() + 1; // JavaScript months are 0-11
-        var y = formattedDate.getFullYear();
+        var y = formattedDate.getFullYear();*/
 
         // Ajout d'une ligne au tableau HTML pour chaque tarif
         $("#contentTableTarif").append(
+
           '<tr>\
-            <td>' + i + '</td>\
-            <td>' + elt["Code TVA"] + '</td>\
-            <td>' + elt["T_Meuble"] + '</td>\
-            <td>' + elt["Ref Client"] + '</td>\
-            <td>' + elt["responsable"] + '</td>\
-            <td>' + elt["agent"] + '</td>\
-            <td>' + elt["suiveur"] + '</td>\
-            <td>' + elt["agent_saisie"] + '</td>\
-            <td>' + elt["Prix_Autre"] + '</td>\
-            <td>' + d + '/' + m + '/' + y + '</td>\
-          </tr>'
+            <td>' +i + "</td>\
+            <td>" +elt["ref_client"]+"</td>\
+            <td>" +elt["nature_bien_text"] +"</td>\
+            <td>" +elt["taux_meuble"]+"</td>\
+            <td>" +elt["edl_prix_std"] +"</td>\
+            <td><a onclick=\"goWhereEdit('"+elt["id"] +"')\"><i class=\"bi bi-pencil-square\"style=\"color: rgb(0, 0, 0)\"></i></a>&nbsp;<a onclick=\"goWhereEdit1('" +elt["id"] +"'\")><i class=\"fa fa-calendar\" aria-hidden=\"true\" style=\"color: rgb(136, 102, 119)\"></i></a></td>\
+          </tr>"
         );
         i++;
       });
-
-      // Masquage de l'indicateur de chargement
       $("#waiters").css("display", "none");
     },
     error: function (response) {
@@ -242,10 +241,10 @@ function code(url_) {
   });
 }
 function goWhereEdit(id) {
-  $.cookie("rdv_to_edit", id);
-  window.location.replace("edit_rdv.html");
+  $.cookie("tarif_to_edit", id);
+  window.location.replace("modifierTarif.html");
 }
 function goWhereEdit1(id) {
-  $.cookie("rdv_to_edit", id);
-  window.location.replace("plannification.html");
+  /*$.cookie("rdv_to_edit", id);
+  window.location.replace("plannification.html");*/
 }
